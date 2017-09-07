@@ -1,4 +1,5 @@
 import App
+import Vapor
 
 /// We have isolated all of our App's logic into
 /// the App module because it makes our app
@@ -14,12 +15,36 @@ import App
 /// this should setup all the routes and special
 /// features of our app
 ///
-/// .run() runs the Droplet's commands, 
+/// .run() runs the Droplet's commands,
 /// if no command is given, it will default to "serve"
 let config = try Config()
 try config.setup()
 
 let drop = try Droplet(config)
 try drop.setup()
+
+drop.get("/name",":name") { request in
+  var str = "Hello World! "
+
+  if let name = request.parameters["name"]?.string {
+    str = str + name + " "
+  }
+
+  return str
+}
+
+drop.get("/name",":name","/age",":age") { request in
+  var str = "Hello World! "
+
+  if let name = request.parameters["name"]?.string {
+    str = str + name + " "
+  }
+
+  if let age = request.parameters["age"]?.string {
+    str = str + age + " "
+  }
+
+  return str
+}
 
 try drop.run()
