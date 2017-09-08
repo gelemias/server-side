@@ -1,0 +1,4 @@
+module CSQLite {
+    umbrella "/Users/guro/server-side/HelloWorld/.build/checkouts/sqlite.git--8232814251736334455/Sources/CSQLite/include"
+    export *
+}
