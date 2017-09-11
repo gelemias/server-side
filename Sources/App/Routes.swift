@@ -19,7 +19,12 @@ extension Droplet {
         }
 
         get("description") { req in return req.description }
-        
+
+        get("greet") { req in
+            let name = req.data["name"]?.string ?? ", what's your name? :)"
+            return "Hello \(name)"
+        }
+
         try resource("posts", PostController.self)
     }
 }
