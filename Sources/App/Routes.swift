@@ -25,6 +25,14 @@ extension Droplet {
             return "Hello \(name)"
         }
 
+        post("post") { req in
+            guard let name = req.data["name"]?.string else {
+                return "⚠️ Please provide a valid name as parameter!"
+            }
+
+            return try JSON(node: ["message": "hello pinkfloid \(name)"])
+        }
+
         try resource("posts", PostController.self)
     }
 }
