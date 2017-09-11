@@ -1,23 +1,45 @@
 <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/1342803/24797159/52fb0d88-1b90-11e7-85a5-359fff0496a4.png" width="320" alt="MySQL">
+    <img src="logo.png" alt="logo">
     <br>
+    <h3 align="center"> Server side example with Vapor 2, Swift 3.1 and Heroku</h3>
+    <center> https://quiet-sea-57405.herokuapp.com/ </center>
     <br>
-    <a href="http://beta.docs.vapor.codes/getting-started/hello-world/">
-        <img src="http://img.shields.io/badge/read_the-docs-92A8D1.svg" alt="Documentation">
-    </a>
-    <a href="http://vapor.team">
-        <img src="http://vapor.team/badge.svg" alt="Slack Team">
-    </a>
-    <a href="LICENSE">
-        <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
-    </a>
-    <a href="https://circleci.com/gh/vapor/mysql">
-        <img src="https://circleci.com/gh/vapor/mysql.svg?style=shield" alt="Continuous Integration">
-    </a>
-    <a href="https://travis-ci.org/vapor/api-template">
-    	<img src="https://travis-ci.org/vapor/api-template.svg?branch=master" alt="Build Status">
-    </a>
-    <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-3.1-brightgreen.svg" alt="Swift 3.1">
-    </a>
-</center>
+</p>
+
+### Installation
+
+#### Xcode (Swift)
+
+Install [Xcode 8](https://developer.apple.com/xcode/) from the Mac App Store. After Xcode 8 has been downloaded, you must open it to finish the installation. This may take a while.
+
+Double check the installation was successful by opening Terminal and running:
+
+```
+  $ eval "$(curl -sL check.vapor.sh)"
+```
+
+##### Vapor
+
+You will need [homebrew](https://docs.brew.sh/Installation.html). The toolbox includes all of Vapor's dependencies as well as a handy CLI tool for creating new projects.
+
+```
+$ brew tap vapor/homebrew-tap
+$ brew update
+$ brew install vapo
+```
+
+##### Heroku
+
+Finally install [Heroku](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+
+```
+$ brew install heroku/brew/heroku
+```
+
+### Examples
+
+These are some examples listed in this project
+
+2. Simple GET https://quiet-sea-57405.herokuapp.com/greet
+3. Dynamic GET https://quiet-sea-57405.herokuapp.com/greet?name=Richard
+4. POST with parameter (name)
