@@ -2,7 +2,6 @@
     <img src="logo.png" alt="logo">
     <br>
     <h3 align="center"> Server side example with Vapor 2, Swift 3.1 and Heroku</h3>
-    <center> https://quiet-sea-57405.herokuapp.com/ </center>
     <br>
 </p>
 
@@ -37,6 +36,8 @@ $ brew install heroku/brew/heroku
 ```
 
 ### Examples
+
+https://quiet-sea-57405.herokuapp.com/
 
 These are some examples listed in this project
 
